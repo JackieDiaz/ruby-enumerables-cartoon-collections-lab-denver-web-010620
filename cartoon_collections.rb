@@ -1,16 +1,41 @@
-def roll_call_dwarves# code an argument here
-  # Your code here
+require "pry"
+
+def roll_call_dwarves(array)
+array.each_with_index {|ele, numval| puts "/#{numval+1}.*#{ele}/"}
+end 
+
+
+def summon_captain_planet(array)
+array.map {|ele| ele.capitalize + "!"} 
 end
 
-def summon_captain_planet# code an argument here
-  # Your code here
+def long_planeteer_calls(array)
+  array.any? {|word| word.length > 4}
+ 
+  #how would you use .include? to count the number of characters of a string in a array? if else statements?
+  
+  #def long_planeteer_calls(array)
+  #if array.include?("") > 4
+  #array.include? <--------(?)
+  #end 
 end
 
-def long_planeteer_calls# code an argument here
-  # Your code here
-end
-
-def find_the_cheese# code an argument here
-  # the array below is here to help
+ def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
-end
+  array.find do |cheese| 
+   cheese_types.include?(cheese)
+    end 
+  end 
+# should user .incule? to solve
+
+
+
+
+#   i = 0 
+#   while i < array.length
+# if array.include?(cheese_types) == true 
+#   p 
+# end
+# i += 1
+# end 
+# end 
